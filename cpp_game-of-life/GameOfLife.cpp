@@ -38,6 +38,8 @@ GameOfLife::GameOfLife(int x_dim, int y_dim)
     this->y_dim = y_dim;
     starting_elements = int(this->x_dim * this->y_dim * 0.2);
     this->wrap = false;
+    this->static_count = 0;
+    this->last_sum = 0;
 
     grid = new int[x_dim * y_dim]();
 
@@ -52,6 +54,8 @@ GameOfLife::GameOfLife(int x_dim, int y_dim, unsigned seed)
     this->y_dim = y_dim;
     starting_elements = int(this->x_dim * this->y_dim * 0.2);
     wrap = false;
+    this->static_count = 0;
+    this->last_sum = 0;
 
     grid = new int[x_dim * y_dim]();
 
@@ -66,6 +70,8 @@ GameOfLife::GameOfLife(int x_dim, int y_dim, unsigned seed, int starting_element
     this->y_dim = y_dim;
     this->starting_elements = starting_elements;
     wrap = wrapping;
+    this->static_count = 0;
+    this->last_sum = 0; 
 
     grid = new int[x_dim * y_dim]();
 
